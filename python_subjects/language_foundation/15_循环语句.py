@@ -44,3 +44,17 @@ print(sum)
 # for 循环主要用在迭代可迭代对象的情况。
 # while 循环主要用在需要满足一定条件为真，反复执行的情况。 （死循环+break 退出等情况。）
 # 部分情况下，for 循环和 while 循环可以互换使用。
+
+# 打印九九乘法表
+for i in range(1, 10):
+    for j in range(1, i + 1):
+        # 打印语句中，大括号及其里面的字符 (称作格式化字段) 将会被 .format() 中的参数替换,注意有个点的
+        print('{}x{}={}\t'.format(i, j, i * j), end='')
+    print()
+
+# 判断是否是闰年
+year = int(input("请输入一个年份: "))
+if (year % 4) == 0 and (year % 100) != 0 or (year % 400) == 0:
+    print('{0} 是闰年'.format(year))
+else:
+    print('{0} 不是闰年'.format(year))
